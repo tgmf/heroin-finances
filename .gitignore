@@ -2,10 +2,6 @@
 node_modules
 dist
 package-lock.json
-emu6
-prod_data
-.firebase
-/src/plugins/firebase.js
 
 /tests/e2e/videos/
 /tests/e2e/screenshots/
@@ -13,6 +9,7 @@ prod_data
 # local env files
 .env.local
 .env.*.local
+.browserlistrc
 
 # Log files
 npm-debug.log*
@@ -26,4 +23,11 @@ yarn-error.log*
 *.ntvs*
 *.njsproj
 *.sln
+.editorconfig
 *.sw?
+
+# Firebase project related files
+emu6
+.firebase
+/src/plugins/firebase.js
+.firebaserc
