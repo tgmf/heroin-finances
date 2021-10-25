@@ -1,0 +1,58 @@
+@font-face {
+  font-family: 'Museo';
+  font-style: normal;
+  font-weight: normal;
+  src: url('./fonts/Museo500-Regular.woff') format('woff'), url('./fonts/Museo500-Regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./fonts/MullerRegular.eot');
+    src: local('Muller Regular'), local('MullerRegular'),
+        url('./fonts/MullerRegular.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/MullerRegular.woff2') format('woff2'),
+        url('./fonts/MullerRegular.woff') format('woff'),
+        url('./fonts/MullerRegular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'Muller';
+  src: url('./fonts/MullerLight.eot');
+  src: local('Muller Light'), local('MullerLight'),
+      url('./fonts/MullerLight.eot?#iefix') format('embedded-opentype'),
+      url('./fonts/MullerLight.woff2') format('woff2'),
+      url('./fonts/MullerLight.woff') format('woff'),
+      url('./fonts/MullerLight.ttf') format('truetype');
+  font-weight: 300;
+  font-style: normal;
+}
+
+@font-face {
+    font-family: 'Muller';
+    src: url('./fonts/MullerBold.eot');
+    src: local('Muller Bold'), local('MullerBold'),
+        url('./fonts/MullerBold.eot?#iefix') format('embedded-opentype'),
+        url('./fonts/MullerBold.woff2') format('woff2'),
+        url('./fonts/MullerBold.woff') format('woff'),
+        url('./fonts/MullerBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+.v-application, .v-application .text-body-1, .v-application .text-body-2 {
+  font-family: "Muller", "Roboto", sans-serif!important;
+}
+
+.v-application .text-h1, .v-toolbar__title {
+  font-family: "Museo", "Roboto", sans-serif!important;
+}
+
+.v-input--is-label-active .theme--light.v-label {
+  color: #333!important;
+}
+
+.v-footer {
+  border: none;
+}
