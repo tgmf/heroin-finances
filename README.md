@@ -1,5 +1,4 @@
-
-Needs /srv/plugins/firebase.js to connect to firebase services<br/>
+Needs fiebase SDK and /srv/plugins/firebase.js to connect to firebase services<br/>
 something like:<br/>
 
 	import firebase from 'firebase/app'
@@ -46,3 +45,5 @@ something like:<br/>
     }
     export const { Timestamp, GeoPoint } = firebase.firestore
     export default firebase
+
+https://firebase.google.com/docs/web/setup
