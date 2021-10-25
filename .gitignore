@@ -10,6 +10,7 @@ package-lock.json
 .env.local
 .env.*.local
 .browserlistrc
+.env
 
 # Log files
 npm-debug.log*
