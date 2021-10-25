@@ -1,13 +1,12 @@
 
 Needs /srv/plugins/firebase.js to connect to firebase services<br/>
 something like:<br/>
-"<br/>
-<code>
-    import firebase from 'firebase/app'
-    import 'firebase/firestore'
-    import 'firebase/auth'
-    import 'firebase/functions'
 
+	import firebase from 'firebase/app'
+	import 'firebase/firestore'
+	import 'firebase/auth'
+	import 'firebase/functions'
+    
     let config = {
         apiKey: 'YOUR_API_KEY_HERE',
         authDomain: 'YOUR_AUTH_DOMAIN_HERE',
@@ -47,5 +46,3 @@ something like:<br/>
     }
     export const { Timestamp, GeoPoint } = firebase.firestore
     export default firebase
-</code><br/>
-"
