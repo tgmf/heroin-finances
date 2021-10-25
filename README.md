@@ -1,4 +1,5 @@
-Needs fiebase SDK:<br>
+Needs fiebase SDK:
+
 	npm install firebase
 	npm install -g firebase-tools
 
@@ -57,12 +58,15 @@ More info:
 https://firebase.google.com/docs/web/setup
 
 To run in dev environment:
+
 	firebase emulators:start --import WAY_TO_YOUR_EMULATOR_DATA
 	npm run dev
 
 To deploy (have to be connected to firebase already):
+
 	npm run build
 	firebase deploy 
 
 To updaye app files only:
+
 	firebase deploy --only hosting
