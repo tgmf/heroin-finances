@@ -1,4 +1,8 @@
-Needs fiebase SDK and /srv/plugins/firebase.js to connect to firebase services<br/>
+Needs fiebase SDK:
+npm install -g firebase-tools
+
+
+ and /srv/plugins/firebase.js to connect to firebase services<br/>
 something like:<br/>
 
 	import firebase from 'firebase/app'
@@ -46,4 +50,18 @@ something like:<br/>
     export const { Timestamp, GeoPoint } = firebase.firestore
     export default firebase
 
+
+
+More info:
 https://firebase.google.com/docs/web/setup
+
+To run in dev environment:
+firebase emulators:start --import WAY_TO_YOUR_EMULATOR_DATA
+npm run dev
+
+To deploy (have to be connected to firebase already):
+npm run build
+firebase deploy 
+
+To updaye app files only:
+firebase deploy --only hosting
