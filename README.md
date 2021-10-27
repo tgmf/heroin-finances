@@ -12,7 +12,7 @@ something like:<br/>
 	import 'firebase/auth'
 	import 'firebase/functions'
     
-    let config = {
+    const config = {
         apiKey: 'YOUR_API_KEY_HERE',
         authDomain: 'YOUR_AUTH_DOMAIN_HERE',
         databaseURL: 'YOUR_DB_URL_HERE',
@@ -24,16 +24,8 @@ something like:<br/>
 
     // Setting up emulator for development
     if (location.hostname === 'localhost') {
-        config = {
-            databaseURL: 'http://localhost:8081?ns=YOUR_NS_HERE',
-            ssl: false,
-            apiKey: 'YOUR_API_KEY_HERE',
-            authDomain: 'YOUR_AUTH_DOMAIN_HERE',
-            projectId: 'YOUR_PROJECT_ID_HERE',
-            storageBucket: 'YOUR_STORAGE_BUCKET_HERE',
-            messagingSenderId: 'YOUR_MESSAGING_SENDER_ID_HERE',
-            appId: 'YOUR_APP_ID_HERE',
-        }
+        config.databaseURL = 'http://localhost:8081?ns=YOUR_NS_HERE'
+        config.ssl = false
     }
 
     export const app = firebase.apps.length
