@@ -25,7 +25,7 @@
     </v-list>
 
     <template
-      v-slot:append
+      #append
     >
       <div class="pa-2">
         <v-btn

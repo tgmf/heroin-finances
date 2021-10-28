@@ -13,7 +13,7 @@
             flat
           >
             <v-toolbar-title>Проекты План</v-toolbar-title>
-            <template v-slot:extension>
+            <template #extension>
               <v-tabs
                 v-model="tabs"
                 centered
@@ -36,7 +36,7 @@
               hide-overlay
               transition="dialog-bottom-transition"
             >
-              <template v-slot:activator="{ on, attrs }">
+              <template #activator="{ on, attrs }">
                 <v-btn
                   color="primary"
                   fab
@@ -268,7 +268,7 @@
                                   <vuetify-money
                                     v-model.number="editedProject.sum"
                                     label="Сумма"
-                                    :value-when-is-empty=0
+                                    :value-when-is-empty="0"
                                     :options="sumOptions"
                                   />
                                 </v-col>
@@ -303,7 +303,7 @@
                                     min-width="290px"
                                   >
                                     <template
-                                      v-slot:activator="{ on, attrs }"
+                                      #activator="{ on, attrs }"
                                     >
                                       <v-text-field
                                         :value="dateRangeText"
@@ -375,7 +375,7 @@
                                     min-width="290px"
                                   >
                                     <template
-                                      v-slot:activator="{ on, attrs }"
+                                      #activator="{ on, attrs }"
                                     >
                                       <v-text-field
                                         v-model="payment.date"
@@ -403,7 +403,7 @@
                                     v-model.number="payment.sum"
                                     label="Сумма"
                                     :options="sumOptions"
-                                    :value-when-is-empty=0
+                                    :value-when-is-empty="0"
                                     :rules="[rules.required]"
                                     required
                                     @input="editedProject.auto = false"
@@ -475,7 +475,7 @@
                                     min-width="290px"
                                   >
                                     <template
-                                      v-slot:activator="{ on, attrs }"
+                                      #activator="{ on, attrs }"
                                     >
                                       <v-text-field
                                         v-model="expense.date"
@@ -566,7 +566,7 @@
                                     v-model.number="expense.sum"
                                     label="Сумма"
                                     :options="sumOptions"
-                                    :value-when-is-empty=0
+                                    :value-when-is-empty="0"
                                     :rules="[rules.required]"
                                     required
                                     @input="updateExpense(expense)"
@@ -953,7 +953,7 @@
                         sort-by="sortableName"
                         class="elevation-1 dashboard-table"
                       >
-                        <template v-slot:top>
+                        <template #top>
                           <v-toolbar
                             flat
                             color="white"
@@ -986,7 +986,7 @@
                               min-width="290px"
                             >
                               <template
-                                v-slot:activator="{ on, attrs }"
+                                #activator="{ on, attrs }"
                               >
                                 <v-text-field
                                   :value="dateFilterValue"
@@ -1055,7 +1055,7 @@
                           {{ item.profitability }}
                         </template>
                         <template
-                          v-slot:item.actions="{ item }"
+                          #item.actions="{ item }"
                         >
                           <v-icon
                             class="mr-2"
@@ -1256,7 +1256,7 @@
         return this.$store.getters.transactionsByDirection('expense')
       },
       getExpenseTypes () {
-        return this.$store.getters.transactionTypes('client')
+        return this.$store.getters.transactionTypes(this.editedProject.slug)
       },
       getPlainTax () {
         const tax = this.getTaxes.find(obj => obj.name === this.editedProject.tax)
